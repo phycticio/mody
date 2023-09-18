@@ -30,4 +30,12 @@ jobs:
             **/.budfiles*
             **/.budfiles/*/**
             **/node_modules/**
+            .editorconfig
+            .gitignore
+            .eslint*
+            bud*
+            tailwind*
+            .stylelint*
+            jsconfig*
+            package*
           log-level: verbose
