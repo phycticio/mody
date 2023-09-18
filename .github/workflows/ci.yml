@@ -12,6 +12,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Install modules
         run: yarn
+      - name: Check the code
+        run: yarn lint
       - name: Build
         run: yarn build
       - name: Deploy to Prod
@@ -25,5 +27,7 @@ jobs:
           exclude: |
             **/.git*
             **/.git*/**
+            **/.budfiles*
+            **/.budfiles/*/**
             **/node_modules/**
           log-level: verbose
