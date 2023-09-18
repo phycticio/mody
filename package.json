@@ -16,15 +16,10 @@
     "translate:update": "for filename in ./resources/lang/*.po; do msgmerge -U $filename ./resources/lang/sage.pot; done; rm -f ./resources/lang/*.po~",
     "translate:compile": "yarn translate:mo && yarn translate:js",
     "translate:js": "wp i18n make-json ./resources/lang --pretty-print",
-    "translate:mo": "wp i18n make-mo ./resources/lang ./resources/lang",
-    "lint": "yarn lint:js && yarn lint:css",
-    "lint:js": "eslint resources/scripts",
-    "lint:css": "stylelint \"resources/**/*.{css,scss}\"",
-    "test": "yarn lint"
+    "translate:mo": "wp i18n make-mo ./resources/lang ./resources/lang"
   },
   "devDependencies": {
     "@roots/bud": "6.12.2",
-    "@roots/bud-eslint": "6.12.2",
     "@roots/bud-sass": "6.12.2",
     "@roots/sage": "6.12.2"
   },
