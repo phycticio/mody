@@ -22,7 +22,7 @@ export default async (app) => {
      * Directory contents to be included in the compilation
      * @see {@link https://bud.js.org/docs/bud.assets/}
      */
-    .assets(['images'])
+    .assets(['images', 'fonts'])
 
     /**
      * Matched files trigger a page reload when modified
@@ -34,7 +34,7 @@ export default async (app) => {
      * Proxy origin (`WP_HOME`)
      * @see {@link https://bud.js.org/docs/bud.proxy/}
      */
-    .proxy('http://example.test')
+    .proxy('http://localhost:10038')
 
     /**
      * Development origin
@@ -46,7 +46,7 @@ export default async (app) => {
      * URI of the `public` directory
      * @see {@link https://bud.js.org/docs/bud.setPublicPath/}
      */
-    .setPublicPath('/app/themes/sage/public/')
+    .setPublicPath('/app/themes/mody/public/')
 
     /**
      * Generate WordPress `theme.json`
@@ -81,8 +81,5 @@ export default async (app) => {
         customFontSize: false,
       },
     })
-    .useTailwindColors()
-    .useTailwindFontFamily()
-    .useTailwindFontSize()
     .enable();
 };

@@ -23,14 +23,13 @@
     "test": "yarn lint"
   },
   "devDependencies": {
-    "@roots/bud": "6.7.3",
-    "@roots/bud-eslint": "^6.16.1",
-    "@roots/bud-prettier": "^6.16.1",
-    "@roots/bud-sass": "^6.16.1",
-    "@roots/bud-stylelint": "^6.16.1",
-    "@roots/bud-tailwindcss": "6.7.3",
-    "@roots/eslint-config": "^6.16.1",
-    "@roots/sage": "6.7.3"
+    "@roots/bud": "6.12.2",
+    "@roots/bud-eslint": "6.12.2",
+    "@roots/bud-sass": "6.12.2",
+    "@roots/sage": "6.12.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@roots/eslint-config": "6.12.2",
+    "install": "^0.13.0"
+  }
 }
