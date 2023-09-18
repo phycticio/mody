@@ -10,6 +10,10 @@ jobs:
     steps:
       - name: Get latest code
         uses: actions/checkout@v2
+      - name: Install modules
+        run: yarn
+      - name: Build
+        run: yarn build
       - name: Deploy to Prod
         if: github.ref == 'refs/heads/master'
         uses: SamKirkland/FTP-Deploy-Action@4.2.0
@@ -23,7 +27,3 @@ jobs:
             **/.git*/**
             **/node_modules/**
           log-level: verbose
-      - name: Install modules
-        run: yarn
-      - name: Build
-        run: yarn build
