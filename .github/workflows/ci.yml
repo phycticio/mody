@@ -25,5 +25,7 @@ jobs:
           exclude: |
             **/.git*
             **/.git*/**
+            **/.budfiles*
+            **/.budfiles/*/**
             **/node_modules/**
           log-level: verbose
