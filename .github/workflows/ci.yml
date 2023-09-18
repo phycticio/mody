@@ -14,8 +14,6 @@ jobs:
         run: yarn
       - name: Build
         run: yarn build
-      - name: Composer
-        run: composer update
       - name: Deploy to Prod
         if: github.ref == 'refs/heads/master'
         uses: SamKirkland/FTP-Deploy-Action@4.2.0
