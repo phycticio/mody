@@ -15,7 +15,7 @@ jobs:
         if: github.ref == 'refs/heads/master'
         uses: SamKirkland/FTP-Deploy-Action@4.2.0
         with:
-          server: ftp.modysolutions.com
+          server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: /public_html/mody.es/wp-content/themes/mody
