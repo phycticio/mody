@@ -38,4 +38,4 @@ jobs:
             .stylelint*
             jsconfig*
             package*
-          log-level: verbose
+          log-level: minimal
