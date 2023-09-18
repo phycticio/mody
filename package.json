@@ -19,7 +19,7 @@
     "translate:mo": "wp i18n make-mo ./resources/lang ./resources/lang",
     "lint": "yarn lint:js && yarn lint:css",
     "lint:js": "eslint resources/scripts",
-    "lint:css": "stylelint \"resources/**/*.{css,scss,vue}\"",
+    "lint:css": "stylelint \"resources/**/*.{css,scss}\"",
     "test": "yarn lint"
   },
   "devDependencies": {
