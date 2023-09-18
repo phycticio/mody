@@ -1,7 +1,6 @@
 on:
   push:
     branches:
-      - develop
       - master
 name: Deploy to Master
 jobs:
@@ -25,4 +24,3 @@ jobs:
             **/.git*/**
             **/node_modules/**
           log-level: verbose
-
