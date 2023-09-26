@@ -134,3 +134,8 @@ add_action('widgets_init', function () {
         'id' => 'sidebar-footer',
     ] + $config);
 });
+
+foreach(glob(__DIR__ . "/actions/*.php") as $action_file) {
+    if(is_file($action_file))
+        require_once $action_file;
+}
