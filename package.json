@@ -21,7 +21,9 @@
   "devDependencies": {
     "@roots/bud": "6.12.2",
     "@roots/bud-sass": "6.12.2",
-    "@roots/sage": "6.12.2"
+    "@roots/sage": "6.12.2",
+    "@wordpress/blocks": "^12.19.0",
+    "@wordpress/dom-ready": "^3.42.0"
   },
   "dependencies": {
     "@roots/eslint-config": "6.12.2",

@@ -1,16 +1,11 @@
 import domReady from '@roots/sage/client/dom-ready';
-import { registerBlockStyle, unregisterBlockStyle } from '@wordpress/blocks';
+import {registerBlockStyle, unregisterBlockStyle, unregisterBlockType} from '@wordpress/blocks';
 
 /**
  * Editor entrypoint
  */
 domReady(() => {
-  unregisterBlockStyle('core/button', 'outline');
-
-  registerBlockStyle('core/button', {
-    name: 'outline',
-    label: 'Outline',
-  });
+  unregisterBlockType('core/paragraph');
 });
 
 /**

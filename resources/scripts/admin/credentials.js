@@ -2,7 +2,9 @@
 
 export const Credentials = {
   init: () => {
-    document.getElementById('orion-toggle-api-keys').addEventListener('click', function(e) {
+    const toggleApiKeysElement = document.getElementById('orion-toggle-api-keys');
+    if(!toggleApiKeysElement) return;
+    toggleApiKeysElement.addEventListener('click', function(e) {
       e.preventDefault();
       const passwordInputs = document.querySelectorAll('#acf-group_65129be483ac5 [type=password]');
       if(passwordInputs.length > 0) {

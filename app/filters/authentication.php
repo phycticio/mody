@@ -1,7 +1,10 @@
 <?php
 
 add_filter('rest_pre_dispatch', function ($result, $wp_rest_server, $request) {
-    $not_allowed_methods = ['POST', 'PUT', 'PATCH'];
+    $parsed_url = parse_url(site_url());
+    $parsed_url['host'] .= $parsed_url['port'] != 80 ? ":{$parsed_url['port']}" : '';
+    if($request->get_header('Host') === $parsed_url['host']) return;
+    $not_allowed_methods = ['POST', 'PUT', 'PATCH', 'DELETE'];
     if(in_array($request->get_method(), $not_allowed_methods)) {
         return new WP_Error(
             'method_not_allowed',
@@ -12,8 +15,8 @@ add_filter('rest_pre_dispatch', function ($result, $wp_rest_server, $request) {
     $api_key = get_field('api_key', 'option');
     $token = get_field('token', 'option');
 
-    $api_key_valid = $request->get_header('X-Api-Key') === $api_key;
-    $token_valid = $request->get_header('X-Token') === $token;
+    $api_key_valid = $request->get_header('X-Api-Key') === base64_encode($api_key);
+    $token_valid = $request->get_header('X-Token') === base64_encode($token);
 
     if ($api_key_valid && $token_valid) {
         return $result;
