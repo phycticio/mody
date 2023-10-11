@@ -16,7 +16,8 @@ export default async (app) => {
     .entry({
       app: ['@scripts/app', '@styles/app'],
       editor: ['@scripts/editor', '@styles/editor'],
-      admin: ['@scripts/admin', '@styles/admin']
+      admin: ['@scripts/admin', '@styles/admin'],
+      login: ['@scripts/login', '@styles/login']
     })
 
     /**
@@ -35,7 +36,7 @@ export default async (app) => {
      * Proxy origin (`WP_HOME`)
      * @see {@link https://bud.js.org/docs/bud.proxy/}
      */
-    .proxy('http://0.0.0.0:10038')
+    .proxy('http://0.0.0.0:10043')
 
     /**
      * Development origin
@@ -47,7 +48,7 @@ export default async (app) => {
      * URI of the `public` directory
      * @see {@link https://bud.js.org/docs/bud.setPublicPath/}
      */
-    .setPublicPath('/app/themes/mody/public/')
+    .setPublicPath('/wp-content/themes/mody/public/')
 
     /**
      * Generate WordPress `theme.json`
